@@ -17,12 +17,13 @@ class Category
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups('categories.index')]
     private ?int $id = null;
 
     #[Assert\NotBlank]
     #[Assert\Length(min: 3, max: 255)]
     #[ORM\Column(length: 255)]
-    #[Groups(['categories.index', 'products.show', 'products.create', 'products.update'])]
+    #[Groups(['categories.index', 'products.show', 'products.create', 'products.update', 'categories.create'])]
     private ?string $name = null;
 
     /**

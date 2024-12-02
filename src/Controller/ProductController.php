@@ -6,14 +6,9 @@ use App\Entity\Product;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Attribute\MapQueryString;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
-use Symfony\Component\Serializer\Annotation\Groups;
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Serializer\Normalizer\AbstractNormalizer;
 
 
 #[Route('/api/products')]
@@ -74,4 +69,13 @@ final class ProductController extends AbstractController
             ['groups' => ['products.index', 'products.show']]
         );
     }
+
+    #[Route('/{id}', methods: ['DELETE'])]
+    public function delete(Product $product, EntityManagerInterface $em)
+    {
+        $em->remove($product);
+        $em->flush();
+        return $this->json(['message' => 'Product deleted'], 200);
+    }
 }
+
