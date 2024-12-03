@@ -1,1 +1,8 @@
-{}
+{
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/assets_controllers_csrf_protection_controller_js.js": "/build/assets_controllers_csrf_protection_controller_js.js",
+  "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_react-dom_index_js-no-6fe8c3.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_react-dom_index_js-no-6fe8c3.js",
+  "build/vendors-node_modules_core-js_modules_es_array-buffer_constructor_js-node_modules_core-js_modu-fd697c.js": "/build/vendors-node_modules_core-js_modules_es_array-buffer_constructor_js-node_modules_core-js_modu-fd697c.js"
+}

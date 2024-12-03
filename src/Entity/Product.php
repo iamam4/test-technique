@@ -28,7 +28,7 @@ class Product
   
     #[ORM\Column(type: Types::TEXT)]
     #[Assert\NotBlank]
-    #[Groups(['products.show', 'products.create', 'products.update'])]
+    #[Groups(['products.show', 'products.create', 'products.update', 'products.index'])]
     private ?string $description = null;
 
   
@@ -42,7 +42,7 @@ class Product
     private ?\DateTimeImmutable $createAt = null;
 
     #[ORM\ManyToOne(inversedBy: 'products',cascade: ['persist'])]
-    #[Groups(['products.show', 'products.create', 'products.update'])]
+    #[Groups(['products.show', 'products.create', 'products.update', 'products.index'])]
     private ?Category $category = null;
 
     public function getId(): ?int

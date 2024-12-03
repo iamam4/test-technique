@@ -23,7 +23,7 @@ class Category
     #[Assert\NotBlank]
     #[Assert\Length(min: 3, max: 255)]
     #[ORM\Column(length: 255)]
-    #[Groups(['categories.index', 'products.show', 'products.create', 'products.update', 'categories.create'])]
+    #[Groups(['categories.index', 'products.show', 'products.create', 'products.update', 'categories.create', 'products.index'])]
     private ?string $name = null;
 
     /**
