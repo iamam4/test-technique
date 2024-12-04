@@ -1,14 +1,6 @@
 import { fetchData, postData, putData, deleteData } from './api';
-import { Category } from './categoryService';
+import { Product } from '../types';
 
-
-export interface Product {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    category: Category;
-}
 
 const PRODUCT_API_URL = '/products';
 

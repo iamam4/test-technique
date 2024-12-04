@@ -10,7 +10,8 @@ export const fetchData = async <T>(url: string): Promise<T> => {
     });
 
     if (!response.ok) {
-        throw new Error(`Erreur de chargement des données: ${response.statusText}`);
+        const errorData = await response.json();
+        throw new Error(`${errorData.error || 'Une erreur est survenue'}`);
     }
 
     return response.json();
@@ -27,7 +28,8 @@ export const postData = async <T>(url: string, data: T): Promise<T> => {
     });
 
     if (!response.ok) {
-        throw new Error(`Erreur lors de l'envoi des données: ${response.statusText}`);
+        const errorData = await response.json();
+        throw new Error(`${errorData.error || 'Une erreur est survenue'}`);
     }
 
     return response.json();
@@ -44,7 +46,9 @@ export const putData = async <T>(url: string, data: T): Promise<T> => {
     });
 
     if (!response.ok) {
-        throw new Error(`Erreur lors de la mise à jour des données: ${response.statusText}`);
+            const errorData = await response.json();
+        throw new Error(`${errorData.error || 'Une erreur est survenue'}`);
+
     }
 
     return response.json();
@@ -57,9 +61,13 @@ export const deleteData = async (url: string): Promise<void> => {
         headers: {
             'Content-Type': 'application/json',
         },
-    });
+    });   
+
 
     if (!response.ok) {
-        throw new Error(`Erreur lors de la suppression des données: ${response.statusText}`);
+        const errorData = await response.json();
+        throw new Error(`${errorData.error || 'Une erreur est survenue'}`);
     }
-};
+
+    return response.json();
+}

@@ -5,23 +5,27 @@ namespace App\DataFixtures;
 use App\Entity\Category;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Faker\Factory;
 
 class CategoryFixtures extends Fixture
 {
     public const CATEGORY_REFERENCE = 'category_';
-    private const CATEGORY_COUNT = 10;
+
+    private const SCHOOL_CATEGORIES = [
+        'Desks',
+        'Chairs',
+        'Whiteboards',
+        'Storage',
+        'Tables',
+        'Bookshelves',
+        'Filing Cabinets',
+        'Teacher Desks',
+        'Lab Equipment',
+        'Lockers'
+    ];
 
     public function load(ObjectManager $manager): void
     {
-        $faker = Factory::create();
-        
-        $categoryNames = [];
-        for ($i = 0; $i < self::CATEGORY_COUNT; $i++) {
-            $categoryNames[] = $faker->unique()->word();
-        }
-
-        foreach ($categoryNames as $index => $name) {
+        foreach (self::SCHOOL_CATEGORIES as $index => $name) {
             $category = new Category();
             $category->setName($name);
             
@@ -35,6 +39,6 @@ class CategoryFixtures extends Fixture
 
     public static function getCategoryCount(): int
     {
-        return self::CATEGORY_COUNT;
+        return count(self::SCHOOL_CATEGORIES);
     }
 }

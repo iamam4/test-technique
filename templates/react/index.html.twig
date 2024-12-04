@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ReactController!{% endblock %}
+{% block title %}HomePage
+{% endblock %}
 
 {% block body %}
-<div
-{{ react_component('Product/ProductList')}}>
-</div>
+
+		<div class="mt-12" {{ react_component('pages/HomePage')}}></div>
 {% endblock %}

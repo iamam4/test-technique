@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ReactController extends AbstractController
 {
-    #[Route('/react', name: 'app_react')]
+    #[Route('/{reactRouting}', name: 'app_react', requirements: ['reactRouting' => '^(?!api).*$'], methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('react/index.html.twig', [
-            'controller_name' => 'ReactController',
-        ]);
+        return $this->render('/react/index.html.twig');
     }
+    
+    
 }
