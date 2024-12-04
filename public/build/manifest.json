@@ -4,5 +4,9 @@
   "build/runtime.js": "/build/runtime.js",
   "build/assets_controllers_csrf_protection_controller_js.js": "/build/assets_controllers_csrf_protection_controller_js.js",
   "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_react-router-dom_dist-b339ba.js": "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_react-router-dom_dist-b339ba.js",
-  "build/vendors-node_modules_core-js_modules_es_array-buffer_constructor_js-node_modules_core-js_modu-fd697c.js": "/build/vendors-node_modules_core-js_modules_es_array-buffer_constructor_js-node_modules_core-js_modu-fd697c.js"
+  "build/vendors-node_modules_core-js_modules_es_array-buffer_constructor_js-node_modules_core-js_modu-fd697c.js": "/build/vendors-node_modules_core-js_modules_es_array-buffer_constructor_js-node_modules_core-js_modu-fd697c.js",
+  "build/fonts/Nunito-Regular.ttf": "/build/fonts/Nunito-Regular.9d7a6e03.ttf",
+  "build/fonts/Nunito-Black.ttf": "/build/fonts/Nunito-Black.39982299.ttf",
+  "build/images/logo.png": "/build/images/logo.png",
+  "build/images/first.png": "/build/images/first.png"
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Product, Category } from '../types';
+import { Product, Category } from '../../types';
 
 
 interface ProductFormProps {

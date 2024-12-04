@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getCategories, updateCategory, deleteCategory, createCategory } from "../services/categoryService";
-import { Category, ModalType } from "../types";
+import { getCategories, updateCategory, deleteCategory, createCategory } from "../../services/categoryService";
+import { Category, ModalType } from "../../types";
 import { Modal } from '../Modal';
 import { CategoryForm } from './CategoryForm';
 
@@ -102,7 +102,7 @@ const CategoryList: React.FC = () => {
                                 <tr key={category.id} className={`${index !== categories.length - 1 ? 'border-b border-slate-500/30' : ''}`}>
                                     <td className="px-4 py-2 border-t border-r">{category.name}</td>
                                     <td className="px-4 py-2 flex flex-row gap-2">
-                                        <button onClick={() => handleModal('update', category)} className="bg-slate-800 py-1 px-4 rounded-full text-white border-2 border-slate-300/30 hover:bg-slate-900">
+                                        <button onClick={() => handleModal('update', category)} className="bg-green-800 py-1 px-4 rounded-full text-white border-2 border-slate-300/30 hover:bg-green-900">
                                             <span className='text-sm'>Modify</span>
                                         </button>
                                         <button onClick={() => handleDelete(category.id)} className="bg-red-500 py-1 px-4 rounded-full text-white border-2 border-slate-300/30 hover:bg-red-600">

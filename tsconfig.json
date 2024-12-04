@@ -10,8 +10,8 @@
       "forceConsistentCasingInFileNames": true
     },
     "include": [
-      "assets/react/controllers/**/*",
+      "assets/react/components/**/*",
       "assets/react/types/**/*"
-    ]
+, "assets/react/types", "assets/react/App.tsx"    ]
   }
   

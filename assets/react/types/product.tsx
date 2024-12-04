@@ -1,4 +1,4 @@
-import { Category } from './';
+import { Category } from '.';
 
 
 export interface Product {

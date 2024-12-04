@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getProducts, deleteProduct, updateProduct, createProduct } from '../services/productService';
-import { Product, ModalType } from '../types';
+import { getProducts, deleteProduct, updateProduct, createProduct } from '../../services/productService';
+import { Product, ModalType } from '../../types';
 import { Modal } from '../Modal';
 import { ProductForm } from './ProductForm';
 
@@ -115,7 +115,7 @@ const ProductList: React.FC = () => {
                                     <td className="px-4 py-2 border-t border-r">{product.price}€</td>
                                     <td className="px-4 py-2 border-t border-r">{product.category.name}</td>
                                     <td className="px-4 py-2 flex flex-row gap-2">
-                                        <button onClick={() => handleModal('update', product)} className="bg-slate-800 py-1 px-4 rounded-full text-white border-2 border-slate-300/30 hover:bg-slate-900">
+                                        <button onClick={() => handleModal('update', product)} className="bg-green-800 py-1 px-4 rounded-full text-white border-2 border-slate-300/30 hover:bg-green-900">
                                             <span className='text-sm'>Modify</span>
                                         </button>
                                         <button onClick={() => handleDelete(product.id)} className="bg-red-500 py-1 px-4 rounded-full text-white border-2 border-slate-300/30 hover:bg-red-600 ">
@@ -149,5 +149,8 @@ const ProductList: React.FC = () => {
 };
 
 export default ProductList;
+
+
+
 
 
